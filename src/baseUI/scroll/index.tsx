@@ -1,4 +1,3 @@
-  
 import React, { forwardRef, useState,useEffect, useRef, useImperativeHandle, useMemo, ReactNode } from "react";
 import BScroll from "better-scroll";
 import styled from 'styled-components';
@@ -56,6 +55,10 @@ export const Scroll = forwardRef((props: ScrollProps, ref) => {
 
   const scrollContaninerRef = useRef<HTMLDivElement | null>(null);
 
+
+  useEffect(()=>{
+    console.log(ref)
+  },[])
   const { 
     direction = "vertical", 
     click = true, 
@@ -95,6 +98,7 @@ export const Scroll = forwardRef((props: ScrollProps, ref) => {
   }, []);
 
   useEffect(() => {
+    console.log(onScroll)
     if(!bScroll || !onScroll) return;
     bScroll.on('scroll', onScroll)
     return () => {

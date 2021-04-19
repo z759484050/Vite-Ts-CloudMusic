@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 
-export const baseUrl:string = 'http://106.15.92.199:3000/';
+export const baseUrl:string = 'http://leehigh.cn:3000/';
 
 //axios 的实例及拦截器配置
 const axiosInstance = axios.create ({
